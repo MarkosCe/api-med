@@ -11,7 +11,8 @@ public record DatosDetalleConsulta(
 
         @JsonFormat(pattern = "yyyy/MM/dd HH:mm") //lo devuelve en otro formato
         LocalDateTime fecha) {
-    public DatosDetalleConsulta(DatosRegistroConsulta datosRegistroConsulta) {
-        this(null, datosRegistroConsulta.idPaciente(), datosRegistroConsulta.idMedico(), datosRegistroConsulta.fecha());
+
+    public DatosDetalleConsulta(Consulta consulta) {
+        this(consulta.getId(), consulta.getPaciente().getId(), consulta.getMedico().getId(), consulta.getFecha());
     }
 }
