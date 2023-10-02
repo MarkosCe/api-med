@@ -22,6 +22,5 @@ public record DatosRegistroMedico( //DTO
         @NotNull
         Especialidad especialidad,
         @NotNull //porque es objeto no va a llegar en blank va a llegar en null
-        @Valid
-                                   DatosDireccion direccion) {
+        @Valid DatosDireccion direccion) {
 }
